@@ -461,7 +461,8 @@
     if (element.tagName.toLowerCase() === 'input') {
       return ['text', 'checkbox', 'radio', 'submit', 'button'].includes(element.type);
     }
-
+   return ['A', 'BUTTON', 'SELECT', 'TEXTAREA'].includes(element.tagName);
+    }
     if (!element || element.nodeType !== Node.ELEMENT_NODE) {
       return false;
     }
