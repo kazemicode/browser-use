@@ -458,6 +458,10 @@
    * Checks if an element is interactive.
    */
   function isInteractiveElement(element) {
+    if (element.tagName.toLowerCase() === 'input') {
+      return ['text', 'checkbox', 'radio', 'submit', 'button'].includes(element.type);
+    }
+
     if (!element || element.nodeType !== Node.ELEMENT_NODE) {
       return false;
     }
